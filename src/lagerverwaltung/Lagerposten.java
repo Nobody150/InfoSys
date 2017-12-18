@@ -5,7 +5,8 @@ public class Lagerposten {
 	private double preis;
 
 	public Lagerposten(Artikel keinPlan, int lagerbestand, double preis) {
-
+		this.lagerbestand = lagerbestand;
+		this.preis = preis;
 	}
 
 }

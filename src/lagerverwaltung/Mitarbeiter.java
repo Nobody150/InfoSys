@@ -2,11 +2,12 @@ package lagerverwaltung;
 
 public class Mitarbeiter {
 
-	private int id;
+	private final String ID;
 	private String name;
 
-	public Mitarbeiter(String name, String keineAhnung) {
-
+	public Mitarbeiter(String id, String name) {
+		this.ID = id;
+		this.name = name;
 	}
 
 }
