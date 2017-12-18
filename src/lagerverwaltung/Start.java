@@ -1,10 +1,10 @@
-package Test;
+package lagerverwaltung;
 
-public class Tests {
+public class Start {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// hallohallo
+
 	}
 
 }
