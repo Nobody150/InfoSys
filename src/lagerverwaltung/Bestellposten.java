@@ -10,4 +10,12 @@ public class Bestellposten {
 		this.anzahl = anzahl;
 	}
 
+	public String getARTIKELID() {
+		return ARTIKELID;
+	}
+
+	public int getAnzahl() {
+		return anzahl;
+	}
+
 }

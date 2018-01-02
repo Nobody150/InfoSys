@@ -11,4 +11,16 @@ public class Lagerposten {
 		this.artikel = artikel;
 	}
 
+	public int getLagerbestand() {
+		return lagerbestand;
+	}
+
+	public void setLagerbestand(int lagerbestand) {
+		this.lagerbestand = lagerbestand;
+	}
+
+	public Artikel getArtikel() {
+		return artikel;
+	}
+
 }
