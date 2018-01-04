@@ -1,0 +1,32 @@
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@1e643faf
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Berechtigung entzogen von: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Wareneingang gebucht (bereits existierender Artikel) von: lagerverwaltung.Mitarbeiter@38cccef Artikel: lagerverwaltung.Artikel@7a79be86 Bestand :15 Preis: 0.5
+2018-01-04 Wareneingang gebucht von: lagerverwaltung.Mitarbeiter@38cccef Artikel: lagerverwaltung.Artikel@340f438e Bestand :15 Preis: 0.5
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@38cccef
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 Berechtigung entzogen von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 Wareneingang gebucht (bereits existierender Artikel) von: lagerverwaltung.Mitarbeiter@5679c6c6 Artikel: lagerverwaltung.Artikel@34ce8af7 Bestand :15 Preis: 0.5
+2018-01-04 Wareneingang gebucht von: lagerverwaltung.Mitarbeiter@5679c6c6 Artikel: lagerverwaltung.Artikel@30c7da1e Bestand :15 Preis: 0.5
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@5679c6c6
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 17:10:56.796884600 Berechtigung entzogen von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 17:10:56.796884600 Wareneingang gebucht (bereits existierender Artikel) von: lagerverwaltung.Mitarbeiter@5679c6c6 Artikel: lagerverwaltung.Artikel@34ce8af7 Bestand :15 Preis: 0.5
+2018-01-04 17:10:56.812510 Wareneingang gebucht von: lagerverwaltung.Mitarbeiter@5679c6c6 Artikel: lagerverwaltung.Artikel@30c7da1e Bestand :15 Preis: 0.5
+2018-01-04 17:10:56.812510 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@5679c6c6
+2018-01-04 17:10:56.812510 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 17:10:56.812510 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@7a79be86
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@1e643faf
+2018-01-04 Berechtigung erteilt an: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 17:20:34.433159500 Berechtigung entzogen von: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 17:20:34.435158300 Wareneingang gebucht (bereits existierender Artikel) von: lagerverwaltung.Mitarbeiter@1e643faf Artikel: lagerverwaltung.Artikel@7a79be86 Bestand :15 Preis: 0.5
+2018-01-04 17:20:34.441155300 Wareneingang gebucht von: lagerverwaltung.Mitarbeiter@1e643faf Artikel: lagerverwaltung.Artikel@340f438e Bestand :15 Preis: 0.5
+2018-01-04 17:20:34.441155300 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@1e643faf
+2018-01-04 17:20:34.442156900 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@6e8dacdf
+2018-01-04 17:20:34.442156900 Bestellung gebucht von: lagerverwaltung.Mitarbeiter@6e8dacdf

@@ -10,4 +10,8 @@ public class Mitarbeiter {
 		this.name = name;
 	}
 
+	public String getID() {
+		return ID;
+	}
+
 }
