@@ -22,9 +22,13 @@ public class Lagerposten {
 	public Artikel getArtikel() {
 		return artikel;
 	}
-	
+
+	public double getPreis() {
+		return preis;
+	}
+
 	public void setPreis(double preis) {
-		this.preis=preis;
+		this.preis = preis;
 	}
 
 }

@@ -8,11 +8,11 @@ public class Start {
 		Lagerverwaltung lagerver = new Lagerverwaltung();
 
 		ArrayList<Artikel> artikel = new ArrayList<>();
-		artikel.add(new Artikel("001", "Produkt1", "angeben1"));
-		artikel.add(new Artikel("002", "Produkt2", "angeben2"));
-		artikel.add(new Artikel("003", "Produkt3", "angeben3"));
-		artikel.add(new Artikel("004", "Produkt4", "angeben4"));
-		artikel.add(new Artikel("005", "Produkt5", "angeben5"));
+		artikel.add(new Artikel("001", "Zettel", "angeben1"));
+		artikel.add(new Artikel("002", "Notizzettel", "angeben2"));
+		artikel.add(new Artikel("003", "kleiner Notizzettel", "angeben3"));
+		artikel.add(new Artikel("004", "besonders geiler Notizzettel", "angeben4"));
+		artikel.add(new Artikel("005", "farbiger Notizzettel", "angeben5"));
 
 		ArrayList<Lagerposten> lagerposten = new ArrayList<>();
 		lagerposten.add(new Lagerposten(artikel.get(0), 50, 0.5));
@@ -22,7 +22,7 @@ public class Start {
 		lagerposten.add(new Lagerposten(artikel.get(4), 30, 0.9));
 
 		ArrayList<Mitarbeiter> mitarbeiter = new ArrayList<>();
-		mitarbeiter.add(new Mitarbeiter("001", "Peter Müller"));
+		mitarbeiter.add(new Mitarbeiter("001", "Peter Meier"));
 		mitarbeiter.add(new Mitarbeiter("002", "Max Mustermann"));
 		mitarbeiter.add(new Mitarbeiter("003", "Erika Mustermann"));
 
@@ -52,7 +52,8 @@ public class Start {
 		// Lagerbestand ausgeben
 		lagerver.lagerbestandAusgeben();
 		// Bucht einen Wareneingang
-		lagerver.wareneingangBuchen(mitarbeiter.get(0), artikel.get(0), 15, 0.5);
+		lagerver.wareneingangBuchen(mitarbeiter.get(0), artikel.get(0), 15, 0.7); // Artikel existiert bereits mit
+																					// anderem Preis
 		lagerver.wareneingangBuchen(mitarbeiter.get(0), new Artikel("006", "Produkt6", "angeben6"), 15, 0.5);
 		lagerver.wareneingangBuchen(mitarbeiter.get(1), artikel.get(1), 35, 1.5);
 		lagerver.wareneingangBuchen(mitarbeiter.get(1), new Artikel("006", "Produkt6", "angeben6"), 15, 0.5);
@@ -61,6 +62,8 @@ public class Start {
 		lagerver.bestellungAusfuehren(mitarbeiter.get(0), bestellposten2);
 		lagerver.bestellungAusfuehren(mitarbeiter.get(1), bestellposten);
 		lagerver.bestellungAusfuehren(mitarbeiter.get(1), bestellposten2);
+
+		System.out.println("Preis von Artikel mit Preisänderung: " + lagerposten.get(0).getPreis());
 
 		// funktioniert nicht
 

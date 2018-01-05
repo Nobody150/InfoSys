@@ -17,4 +17,8 @@ public class Artikel {
 		return ID;
 	}
 
+	public String getName() {
+		return name;
+	}
+
 }

@@ -14,4 +14,8 @@ public class Mitarbeiter {
 		return ID;
 	}
 
+	public String getName() {
+		return name;
+	}
+
 }
