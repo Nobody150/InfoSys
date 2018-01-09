@@ -2,6 +2,12 @@ package lagerverwaltung;
 
 import java.util.ArrayList;
 
+/**
+ * Ne Main Klasse
+ * 
+ * @author Phil Schneider und Jakob Burger
+ *
+ */
 public class Start {
 
 	public static void main(String[] args) {
@@ -22,7 +28,7 @@ public class Start {
 		lagerposten.add(new Lagerposten(artikel.get(4), 30, 0.9));
 
 		ArrayList<Mitarbeiter> mitarbeiter = new ArrayList<>();
-		mitarbeiter.add(new Mitarbeiter("001", "Peter Meier"));
+		mitarbeiter.add(new Mitarbeiter("001", "Peter Enis"));
 		mitarbeiter.add(new Mitarbeiter("002", "Max Mustermann"));
 		mitarbeiter.add(new Mitarbeiter("003", "Erika Mustermann"));
 
@@ -47,16 +53,21 @@ public class Start {
 		lagerver.berechtigungErteilen(mitarbeiter.get(0));
 		// berechtigung erteilen
 		lagerver.berechtigungErteilen(mitarbeiter.get(1));
+		lagerver.berechtigungErteilen(mitarbeiter.get(1));
 		// berechtigung entziehen
 		lagerver.berechtigungZurueckziehen(mitarbeiter.get(1));
+		lagerver.berechtigungZurueckziehen(mitarbeiter.get(1));
+
 		// Lagerbestand ausgeben
 		lagerver.lagerbestandAusgeben();
+
 		// Bucht einen Wareneingang
 		lagerver.wareneingangBuchen(mitarbeiter.get(0), artikel.get(0), 15, 0.7); // Artikel existiert bereits mit
 																					// anderem Preis
-		lagerver.wareneingangBuchen(mitarbeiter.get(0), new Artikel("006", "Produkt6", "angeben6"), 15, 0.5);
+		lagerver.wareneingangBuchen(mitarbeiter.get(0), new Artikel("006", "Der BESTE Zettel", "angeben6"), 15, 0.5);
 		lagerver.wareneingangBuchen(mitarbeiter.get(1), artikel.get(1), 35, 1.5);
-		lagerver.wareneingangBuchen(mitarbeiter.get(1), new Artikel("006", "Produkt6", "angeben6"), 15, 0.5);
+		lagerver.wareneingangBuchen(mitarbeiter.get(1), new Artikel("006", "Der BESTE Zettel", "angeben6"), 15, 0.5);
+
 		// führt eine Bestellung aus
 		lagerver.bestellungAusfuehren(mitarbeiter.get(0), bestellposten);
 		lagerver.bestellungAusfuehren(mitarbeiter.get(0), bestellposten2);
