@@ -8,8 +8,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 /**
- * Lagerverwaltung dient als Klasse die alles Aktionen steuert und die einzelen Methoden beinhaltet.
+ * Lagerverwaltung dient als Klasse die alles Aktionen steuert und die einzelen
+ * Methoden beinhaltet.
+ * 
  * @author Phil Schneider und Jakob Burger
  *
  */
@@ -17,7 +20,6 @@ public class Lagerverwaltung {
 
 	private Set<String> berechtigteMitarbeiter;
 	private List<Lagerposten> lagerposten;
-	private List<Bestellbestaetigung> bestellbestaetigung;
 	PrintWriter writer;
 
 	/**
@@ -26,7 +28,6 @@ public class Lagerverwaltung {
 	public Lagerverwaltung() {
 		berechtigteMitarbeiter = new HashSet<>();
 		lagerposten = new ArrayList<>();
-		bestellbestaetigung = new ArrayList<>();
 		try {
 			writer = new PrintWriter(new FileWriter("LogFile.txt", true));
 			writer.println("_________________________________________________________");
@@ -148,14 +149,15 @@ public class Lagerverwaltung {
 	 * @param bestellposten
 	 *            Enthält die Bestellposten welche bestellt werden sollen (List)
 	 */
-	public void bestellungAusfuehren(Mitarbeiter mitarbeiter, List<Bestellposten> bestellposten) {
+	public Bestellbestaetigung bestellungAusfuehren(Mitarbeiter mitarbeiter, List<Bestellposten> bestellposten) {
 		if (mitarbeiter != null && bestellposten != null && lagerposten != null) {
 			Artikel artikel;
 			double gesamtpreis = 0;
 			boolean bestellungausführbar = true;
-			
-			if (berechtigteMitarbeiter.contains(mitarbeiter.getID())) {		//Mitarbeiter prüfen das er Rechte besitzt
-				for (Bestellposten bposten : bestellposten) {				//Prüfen ob die Artikel exestieren und genügend Lagerbestand vorhanden ist
+
+			if (berechtigteMitarbeiter.contains(mitarbeiter.getID())) { // Mitarbeiter prüfen das er Rechte besitzt
+				for (Bestellposten bposten : bestellposten) { // Prüfen ob die Artikel exestieren und genügend
+																// Lagerbestand vorhanden ist
 					if (bestellungausführbar) {
 						for (Lagerposten lposten : lagerposten) {
 							artikel = lposten.getArtikel();
@@ -171,38 +173,42 @@ public class Lagerverwaltung {
 						}
 					}
 				}
-				//Bestellungsmenge abziehen von dem Lagerbestand
-				if (bestellungausführbar) {		
+				// Bestellungsmenge abziehen von dem Lagerbestand
+				if (bestellungausführbar) {
 					for (Bestellposten bposten : bestellposten) {
 						for (Lagerposten lposten : lagerposten) {
 							artikel = lposten.getArtikel();
 							if (artikel.getID().equals(bposten.getARTIKELID())) {
 								lposten.setLagerbestand(lposten.getLagerbestand() - bposten.getAnzahl());
-								gesamtpreis=lposten.getPreis();
+								gesamtpreis = lposten.getPreis();
 							}
 						}
 					}
-				//Ausgabe je nach Wahrheitswert
-					bestellbestaetigung.add(new Bestellbestaetigung(true, gesamtpreis));
+					// Ausgabe je nach Wahrheitswert
 					writer.println(LocalDate.now() + " Bestellung gebucht von Mitarbeiter: " + mitarbeiter.getID()
 							+ " (" + mitarbeiter.getName() + ")");
 					writer.flush();
+					return new Bestellbestaetigung(true, gesamtpreis);
 				} else {
-					bestellbestaetigung.add(new Bestellbestaetigung(false, 0));
 					System.out.println("Lagerbestand nicht ausreichend");
+					return new Bestellbestaetigung(false, 0);
 				}
 			} else {
 				System.out.println("Sie haben keine Berechtigung");
+				return new Bestellbestaetigung(false, 0);
+
 			}
-			writer.flush();
 		} else {
 			System.out.println("Bestellvorgang fehlgeschlagen");
+			return new Bestellbestaetigung(false, 0);
 		}
 	}
 
 	/**
 	 * Fügt einen Lagerposten in die Liste hinzu.
-	 * @param lagerposten Objekt Lagerposten mit dem jeweiligen Artikel.
+	 * 
+	 * @param lagerposten
+	 *            Objekt Lagerposten mit dem jeweiligen Artikel.
 	 */
 	public void setLagerposten(Lagerposten lagerposten) {
 		this.lagerposten.add(lagerposten);
